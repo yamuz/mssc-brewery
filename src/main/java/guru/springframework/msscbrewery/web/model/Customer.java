@@ -1,17 +1,20 @@
 package guru.springframework.msscbrewery.web.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.UUID;
+
 /**
  * created by Almaz
  */
+@Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Customer {
-    private Long id;
+    private UUID id;
     private String name;
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getId() {
-        return id;
-    }
 }

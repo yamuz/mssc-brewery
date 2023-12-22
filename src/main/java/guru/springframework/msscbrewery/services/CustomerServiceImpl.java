@@ -28,13 +28,10 @@ public class CustomerServiceImpl implements CustomerService{
 
     @Override
     public CustomerDto addNewCustomer(CustomerDto customerDto) {
-        //ModelMapper mapper = new ModelMapper();
         Customer customer = mapper.convertValue(customerDto, Customer.class);
-
         Customer savedCustomer = customerRepository.addNewCustomer(customer);
         CustomerDto savedCustomerDto = mapper.convertValue(savedCustomer, CustomerDto.class);
 
         return savedCustomerDto;
-
     }
 }
